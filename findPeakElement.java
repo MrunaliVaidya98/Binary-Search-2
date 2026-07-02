@@ -3,15 +3,14 @@ class Solution{
         int left = 0;
         int right = nums.length-1;
 
-        while(left<right){
+        while(left < right){
             int mid = left + (right-left)/2;
 
             //if mid is smaller than next elemnt
             //peak is must be on right side
-            if(nums[mid]<nums[mid+1]){
+            if(nums[mid] < nums[mid+1]){
                 left= mid+1;
             }
-            /otherwise peak is at mid or left side
             else{
                 right=mid;
             }
